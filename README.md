@@ -6,7 +6,7 @@ Gemaakt door:
 - *Youssef el Ghani*
 
 ### Beschrijving
-*korte beschrijving van het spel, wat je kunt doen in het spel, wat het doel is*
+*het doel is om zo groot mogelijk te worden door dingen op je pad op te rapen*
 
 ## Mijn planning
 Werk de planning af van boven naar beneden<br>
