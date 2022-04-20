@@ -17,11 +17,11 @@ Basis: uitleg, spelen, afgaan en punten
 - [x] 1. maak index.html, style.css en script.js met canvas
 - [x] 2. teken speler
         - Zet je code in de functie tekenAlles()
-- [ ] 3. beweeg speler
+- [x] 3. beweeg speler
         - Zet je code in de functie beweegAlles()
         - Kies de afmeting van speler
         - Gebruik variabalen spelerX en spelerY als middelpunt van de speler
-- [ ] 4. *(pas de volgende stappen in de planning zelf aan)*
+- [x] 4. *(pas de volgende stappen in de planning zelf aan)*
 - [ ] x. teken je tegenspeler (vijanden of dingen die je moet pakken of doelen of ...)
 - [ ] x. teken een bal, kogel (als die in je spel zit)
 - [ ] x. beweeg de tegenspeler of je bal
