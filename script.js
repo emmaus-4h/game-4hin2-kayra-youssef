@@ -14,7 +14,7 @@ const SPELEN = 1;
 const GAMEOVER = 2;
 var spelStatus = SPELEN;
 
-var spelerX = 600; // x-positie van speler
+var spelerX = 100; // x-positie van speler
 var spelerY = 600; // y-positie van speler
 
 /* ********************************************* */
@@ -54,7 +54,8 @@ var verwerkBotsing = function () {
  */
 var tekenAlles = function () {
   // achtergrond
-
+  fill("green");
+  rect(0,0,1280,720);
   // vijand
 
   // kogel
