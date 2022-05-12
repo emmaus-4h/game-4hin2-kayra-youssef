@@ -67,7 +67,10 @@ var tekenAlles = function () {
   fill("green");
   rect(0,0,1280,720);
   // vijand
-. 
+  fill("red");
+  rect(vijandX - 25, vijand Y - 25, 50, 50);
+  fill("black");
+  ellipse(vijandX - vijand Y, 10, 10);
   // kogel
 
   // speler
