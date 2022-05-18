@@ -16,6 +16,8 @@ var spelStatus = SPELEN;
 
 var spelerX = 100; // x-positie van speler
 var spelerY = 600; // y-positie van speler
+var spelerSpringt = false;
+var snelheid = 0 ;
 
 var vijandX = 600;
 var vijandY = 500
@@ -27,7 +29,7 @@ var vijandY = 500
  * Updatet globale variabelen met posities van speler, vijanden en kogels
  */
 var beweegAlles = function () {
-  // speler
+  // speler lopen
   if (keyIsDown(RIGHT_ARROW)) {
   spelerX = spelerX + 1;
 }
@@ -40,6 +42,29 @@ var beweegAlles = function () {
   if (keyIsDown(UP_ARROW)) {
     spelerY = speler Y - 1;
   }
+
+
+  
+
+  // start
+  
+  if (spelerSpringt == false && keyIsDowm(32)) { // spatie
+  snelheid = 10;
+    spelerSpringt = true;
+  } 
+
+  // springt
+  if (spelerSpringt == true) {
+    spelerY = spelerY - snelheid;
+    snelheid = snelheid - 0.1;
+  }
+
+  // stopt
+  if (spelerSpringt == true && spelerY > 610) {
+    spelerSpringt + false;
+    spelerY = 600;
+  }
+  
   // vijand
 
   // kogel
