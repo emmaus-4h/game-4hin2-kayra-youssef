@@ -47,7 +47,6 @@ var beweegAlles = function () {
   
 
   // start
-  
   if (spelerSpringt == false && keyIsDowm(32)) { // spatie
   snelheid = 10;
     spelerSpringt = true;
@@ -149,6 +148,7 @@ function draw() {
     }
   }
   if (spelStatus === GAMEOVER) {
+    console.log("GAMEOVER")
     // teken game-over scherm
 
   }
