@@ -34,20 +34,20 @@ var beweegAlles = function () {
   spelerX = spelerX + 1;
 }
   if (keyIsDown(LEFT_ARROW)) {
-    spelerX = speler X - 1;
+    spelerX = spelerX - 1;
   }
   if (keyIsDown(DOWN_ARROW)) {
     spelerY = spelerY + 1;
   }
   if (keyIsDown(UP_ARROW)) {
-    spelerY = speler Y - 1;
+    spelerY = spelerY - 1;
   }
 
 
   
 
   // start
-  if (spelerSpringt == false && keyIsDowm(32)) { // spatie
+  if (spelerSpringt == false && keyIsDown(32)) { // spatie
   snelheid = 10;
     spelerSpringt = true;
   } 
@@ -92,9 +92,9 @@ var tekenAlles = function () {
   rect(0,0,1280,720);
   // vijand
   fill("red");
-  rect(vijandX - 25, vijand Y - 25, 50, 50);
+  rect(vijandX - 25, vijandY - 25, 50, 50);
   fill("black");
-  ellipse(vijandX - vijand Y, 10, 10);
+  ellipse(vijandX - vijandY, 10, 10);
   // kogel
 
   // speler
@@ -113,7 +113,11 @@ var tekenAlles = function () {
  */
 var checkGameOver = function () {
   // check of HP 0 is , of tijd op is, of ...
-  return false;
+  if (HP <= 0 ) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 /* ********************************************* */
@@ -140,6 +144,7 @@ function setup() {
  */
 function draw() {
   if (spelStatus === SPELEN) {
+    console.log("SPELEN");
     beweegAlles();
     verwerkBotsing();
     tekenAlles();
@@ -148,8 +153,15 @@ function draw() {
     }
   }
   if (spelStatus === GAMEOVER) {
+    fill("white");
+    textsize(50);
+    text("GAME OVER", 300, 300);
     console.log("GAMEOVER")
     // teken game-over scherm
-
+    if (keyIsDown(13)) { // enter
+    spelerX = 550;
+    HP = 50;
+    spelStatus = SPELEN;
+    }
   }
 }
