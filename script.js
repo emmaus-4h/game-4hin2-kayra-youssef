@@ -35,16 +35,16 @@ var HP = 10;
 var beweegalles = function () {
   // speler lopen
   if (keyIsDown(RIGHT_ARROW)) {
-  spelerX = spelerX + 10;
+  spelerX = spelerX + 7;
 }
   if (keyIsDown(LEFT_ARROW)) {
-    spelerX = spelerX - 1;
+    spelerX = spelerX - 7;
   }
   if (keyIsDown(DOWN_ARROW)) {
-    spelerY = spelerY + 1;
+    spelerY = spelerY + 7;
   }
   if (keyIsDown(UP_ARROW)) {
-    spelerY = spelerY - 1;
+    spelerY = spelerY - 7;
   }
 
 
