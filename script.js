@@ -21,7 +21,9 @@ var spelerSpringt = false;
 var snelheid = 0 ;
 
 var vijandX = 600;
-var vijandY = 500
+var vijandY = 500;
+
+var HP = 10;
 
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
@@ -106,7 +108,9 @@ var tekenAlles = function () {
   ellipse(spelerX, spelerY, 10, 10);
 
   // punten en health
-
+  fill("yellow");
+  textSize(50);
+  text("HP = " + HP, 100, 200);
 };
 
 /**
@@ -147,9 +151,10 @@ function setup() {
 function draw() {
   if (spelStatus === SPELEN) {
     console.log("SPELEN");
+    beweegalles();
     verwerkBotsing();
     tekenAlles();
-    if (checkGameOver) {
+    if ( checkGameOver() ) {
       spelStatus = GAMEOVER;
     }
   }
