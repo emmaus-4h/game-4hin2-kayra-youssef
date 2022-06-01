@@ -22,6 +22,7 @@ var snelheid = 0 ;
 
 var vijandX = 600;
 var vijandY = 500
+
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
 /* ********************************************* */
@@ -29,7 +30,7 @@ var vijandY = 500
 /**
  * Updatet globale variabelen met posities van speler, vijanden en kogels
  */
-var beweegAlles = function () {
+var beweegalles = function () {
   // speler lopen
   if (keyIsDown(RIGHT_ARROW)) {
   spelerX = spelerX + 10;
@@ -146,7 +147,6 @@ function setup() {
 function draw() {
   if (spelStatus === SPELEN) {
     console.log("SPELEN");
-    beweegAlles();
     verwerkBotsing();
     tekenAlles();
     if (checkGameOver) {
@@ -155,7 +155,6 @@ function draw() {
   }
   if (spelStatus === GAMEOVER) {
     fill("white");
-    textsize(50);
     text("GAME OVER", 300, 300);
     console.log("GAMEOVER")
     // teken game-over scherm
