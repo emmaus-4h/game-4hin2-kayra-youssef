@@ -32,7 +32,7 @@ var vijandY = 500
 var beweegAlles = function () {
   // speler lopen
   if (keyIsDown(RIGHT_ARROW)) {
-  spelerX = spelerX + 1;
+  spelerX = spelerX + 10;
 }
   if (keyIsDown(LEFT_ARROW)) {
     spelerX = spelerX - 1;
@@ -149,7 +149,7 @@ function draw() {
     beweegAlles();
     verwerkBotsing();
     tekenAlles();
-    if (checkGameOver()) {
+    if (checkGameOver) {
       spelStatus = GAMEOVER;
     }
   }
