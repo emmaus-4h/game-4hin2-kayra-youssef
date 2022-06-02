@@ -23,6 +23,10 @@ var snelheid = 0 ;
 var vijandX = 600;
 var vijandY = 500;
 
+var kogelX = 400;
+var kogelY = 300;
+var kogelVliegt = false;
+
 var HP = 10;
 
 /* ********************************************* */
@@ -71,8 +75,19 @@ var beweegalles = function () {
   // vijand
 
   // kogel
-};
 
+  if (kogelVliegt == false && keyIsDown(13)) { //enter
+    kogelVliegt = true;
+    kogelX = spelerX;
+    kogelY = spelerY;
+  }
+  if (kogelVliegt === true) { // kogel vliegt}
+  kogelY = kogelY - 1;
+  }
+  if (kogelVliegt === true && kogelY < 0) { // kogel verdwijnt
+  kogelVliegt = false;}
+  };
+  
 /**
  * Checkt botsingen
  * Verwijdert neergeschoten dingen
