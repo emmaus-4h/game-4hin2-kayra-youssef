@@ -13,6 +13,7 @@
 
 const SPELEN = 1;
 const GAMEOVER = 2;
+const UITLEG = 3;
 var spelStatus = SPELEN;
 
 var spelerX = 100; // x-positie van speler
