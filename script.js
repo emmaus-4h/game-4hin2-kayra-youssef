@@ -50,7 +50,7 @@ var beweegalles = function () {
   if (keyIsDown(DOWN_ARROW)) {
     spelerY = spelerY + 7;
   }
-  if (keyIsDown(32)) {
+  if (keyIsDown(UP_ARROw)) {
     spelerY = spelerY - 7;
   }
 
@@ -64,15 +64,20 @@ var beweegalles = function () {
   } 
 
   // springt
-  if (spelerSpringt == true) {
-    spelerY = spelerY - snelheid;
-    snelheid = snelheid - 0.1;
+  if (spelerSpringt === false && 
+   keyIsDown(KEY_SPACE) { // start sprong
+    spelerSpringt = true;
+    springSnelheid = springSnelheidstart;
+  }
+ 
+
+if (spelerSpringt === true) { // sprong bezig
+    spelerY = spelerY - springSnelheid;
+    springSnelheid = springSnelheid - zwaartekracht;
   }
 
-  // stopt
-  if (spelerSpringt == true && spelerY > 610) {
-    spelerSpringt + false;
-    spelerY = 600;
+  if (spelerY > 610) { // sprong klaar
+    spelerSpringt = false;
   }
   
   // vijand
