@@ -17,8 +17,11 @@ var spelStatus = SPELEN;
 
 var spelerX = 100; // x-positie van speler
 var spelerY = 600; // y-positie van speler
+
 var spelerSpringt = false;
-var snelheid = 0 ;
+var springSnelheid = 0 ;
+var springSnelheidStart = 10;
+var zwaartekracht = 0.5 ;
 
 var vijandX = 600;
 var vijandY = 500;
@@ -47,7 +50,7 @@ var beweegalles = function () {
   if (keyIsDown(DOWN_ARROW)) {
     spelerY = spelerY + 7;
   }
-  if (keyIsDown(UP_ARROW)) {
+  if (keyIsDown(32)) {
     spelerY = spelerY - 7;
   }
 
@@ -55,7 +58,7 @@ var beweegalles = function () {
   
 
   // start
-  if (spelerSpringt == false && keyIsDown(32)) { // spatie
+  
   snelheid = 10;
     spelerSpringt = true;
   } 
@@ -76,7 +79,7 @@ var beweegalles = function () {
 
   // kogel
 
-  if (kogelVliegt == false && keyIsDown(13)) { //enter
+  if (kogelVliegt == false && keyIsDown(13)) { // start schieten
     kogelVliegt = true;
     kogelX = spelerX;
     kogelY = spelerY;
