@@ -13,7 +13,6 @@
 
 const SPELEN = 1;
 const GAMEOVER = 2;
-const UITLEG = 3;
 var spelStatus = SPELEN;
 
 var spelerX = 100; // x-positie van speler
@@ -51,7 +50,7 @@ var beweegalles = function () {
   if (keyIsDown(DOWN_ARROW)) {
     spelerY = spelerY + 7;
   }
-  if (keyIsDown(UP_ARROw)) {
+  if (keyIsDown(32)) {
     spelerY = spelerY - 7;
   }
 
@@ -65,20 +64,15 @@ var beweegalles = function () {
   } 
 
   // springt
-  if (spelerSpringt === false && 
-   keyIsDown(KEY_SPACE) { // start sprong
-    spelerSpringt = true;
-    springSnelheid = springSnelheidstart;
-  }
- 
-
-if (spelerSpringt === true) { // sprong bezig
-    spelerY = spelerY - springSnelheid;
-    springSnelheid = springSnelheid - zwaartekracht;
+  if (spelerSpringt == true) {
+    spelerY = spelerY - snelheid;
+    snelheid = snelheid - 0.1;
   }
 
-  if (spelerY > 610) { // sprong klaar
-    spelerSpringt = false;
+  // stopt
+  if (spelerSpringt == true && spelerY > 610) {
+    spelerSpringt + false;
+    spelerY = 600;
   }
   
   // vijand
