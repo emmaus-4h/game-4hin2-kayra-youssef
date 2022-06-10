@@ -59,19 +59,19 @@ var beweegalles = function () {
 
   // start
   
-  snelheid = 10;
-    spelerSpringt = true;
-  } 
 
-  // springt
-  if (spelerSpringt == true) {
+// speler springen
+if (spelerSpringt === false && keyIsDown(32)) { // spatie
+    snelheid = 5; 
+    spelerSpringt = true;
+}
+if (spelerSpringt === true) {
     spelerY = spelerY - snelheid;
-    snelheid = snelheid - 0.1;
-  }
+    snelheid = snelheid - 0.18;
+}
 
   // stopt
-  if (spelerSpringt == true && spelerY > 610) {
-    spelerSpringt + false;
+   if (spelerSpringt == true && spelerY > 610) {    spelerSpringt + false;
     spelerY = 600;
   }
   
@@ -176,15 +176,15 @@ function draw() {
       spelStatus = GAMEOVER;
     }
   }
-  if (spelStatus === GAMEOVER) {
-    fill("white");
-    text("GAME OVER", 300, 300);
-    console.log("GAMEOVER")
-    // teken game-over scherm
-    if (keyIsDown(13)) { // enter
-    spelerX = 550;
-    HP = 50;
-    spelStatus = SPELEN;
+
+  
+   if (spelStatus === GAMEOVER) {
+    // teken game-over scherm 
+     console.log("game over")
+     image(img_lijst[0],0,0, 1100, 800);
+     if(keyIsDown(R)) {
+    
+      spelStatus = UITLEG;
     }
-  }
+  } 
 }
