@@ -11,6 +11,8 @@
 /* globale variabelen die je gebruikt in je game */
 /* ********************************************* */
 
+const KEY_SPACE = 32; // keycode van spatie 
+
 var aantal = 0;
 
 const SPELEN = 1;
@@ -23,7 +25,7 @@ var spelerY = 600; // y-positie van speler
 
 var spelerSpringt = false;
 var springSnelheid = 0 ;
-var springSnelheidStart = 10;
+var springSnelheidStart = 24;
 var zwaartekracht = 0.5 ;
 
 var vijandX = 600;
@@ -34,6 +36,7 @@ var kogelY = 300;
 var kogelVliegt = false;
 
 var HP = 10;
+
 
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
@@ -64,19 +67,18 @@ var beweegalles = function () {
   
 
 // speler springen
-if (spelerSpringt === false && keyIsDown(32)) { // spatie
-    snelheid = 5; 
-    spelerSpringt = true;
+if (spelerSpringt === false &&
+    keyIsDown(KEY_SPACE)) { // start sprong
+   spelerSpringt = true;
+  springSnelheid = springSnelheidStart;
 }
-if (spelerSpringt === true) {
-    spelerY = spelerY - snelheid;
-    snelheid = snelheid - 0.18;
+if (spelerSpringt === true) { // sprong bezig
+    spelerY = spelerY - springSnelheid;
+    springSnelheid = springSnelheid - zwaartekracht;
 }
-
-  // stopt
-   if (spelerSpringt == true && spelerY > 610) {    spelerSpringt + false;
-    spelerY = 600;
-  }
+if (spelerY > 610) { // sprong klaar
+  spelerSpringt = false;
+}   
   
   // vijand
 
@@ -156,6 +158,9 @@ var tekenAlles = function () {
 /* setup() en draw() functies / hoofdprogramma   */
 /* ********************************************* */
 
+/* preload
+* deze functie wordt 1x uitgevoerd voor setup
+* we laden hier de plaatjes
 /**
  * setup
  * de code in deze functie wordt één keer uitgevoerd door
