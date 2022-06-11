@@ -190,7 +190,7 @@ function draw() {
      console.log("game over");
     textSize(50);
     fill("white");
-    text("game over, druk spatie voor start", 300, 300);
+    text("Game over, druk spatie voor nieuw spel", 300, 300);
      if(keyIsDown(32)) { // spatie
     spelStatus = UITLEG;
      }
@@ -199,10 +199,11 @@ function draw() {
     // teken uitleg scherm
     console.log("uitleg");
     textSize(50);
-    fill("green");
+    fill("red
+         ");
     rect(0, 0, 1280, 720);
     fill("white");
-    text("uitleg: doe je ding, druk op enter", 300, 300);
+    text("Druk op enter en het spel start", 300, 300);
     if (keyIsDown(13)) { // enter
           spelerX = 100;
     spelStatus = SPELEN;
