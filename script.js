@@ -50,7 +50,7 @@ var beweegalles = function () {
   if (keyIsDown(DOWN_ARROW)) {
     spelerY = spelerY + 7;
   }
-  if (keyIsDown(32)) {
+  if (keyIsDown(UP_ARROW)) {
     spelerY = spelerY - 7;
   }
 
