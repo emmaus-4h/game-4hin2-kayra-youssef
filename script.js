@@ -199,8 +199,7 @@ function draw() {
     // teken uitleg scherm
     console.log("uitleg");
     textSize(50);
-    fill("red
-         ");
+    fill("red");
     rect(0, 0, 1280, 720);
     fill("white");
     text("Druk op enter en het spel start", 300, 300);
