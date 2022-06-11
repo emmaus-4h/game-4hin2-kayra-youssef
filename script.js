@@ -11,9 +11,12 @@
 /* globale variabelen die je gebruikt in je game */
 /* ********************************************* */
 
+var aantal = 0;
+
 const SPELEN = 1;
 const GAMEOVER = 2;
-var spelStatus = SPELEN;
+const UITLEG = 8;
+var spelStatus = UITLEG;
 
 var spelerX = 100; // x-positie van speler
 var spelerY = 600; // y-positie van speler
@@ -98,12 +101,7 @@ if (spelerSpringt === true) {
  */
 var verwerkBotsing = function () {
   // botsing speler tegen vijand
-  if (spelerX - vijandX < 50 &&
-      spelerX - vijandX >-50 &&
-      spelerY - vijandY <50 &&
-      spelerY - vijandY > -50) {
-    console.log("Botsing");
-      }
+
   // botsing kogel tegen vijand
 
   // update punten en health
@@ -140,13 +138,18 @@ var tekenAlles = function () {
  * return true als het gameover is
  * anders return false
  */
-var checkGameOver = function () {
+ var checkGameOver = function () {
+   if (spelerX - vijandX < 50 &&
+      vijandX - spelerX < 50 &&
+      spelerY - vijandY < 50 &&
+      vijandY - spelerY < 50) {
+     aantal = aantal + 1;
+     console.log("botsing"+aantal)
+     return true;
+      }
   // check of HP 0 is , of tijd op is, of ...
-  if (HP <= 0 ) {
-    return true;
-  } else {
     return false;
-  }
+ 
 };
 
 /* ********************************************* */
@@ -179,16 +182,30 @@ function draw() {
     if (checkGameOver()) {
       spelStatus = GAMEOVER;
     }
+      console.log("spelen");
   }
-
   
    if (spelStatus === GAMEOVER) {
     // teken game-over scherm 
-     console.log("game over")
-     image(img_lijst[0],0,0, 1100, 800);
-     if(keyIsDown(R)) {
-    
-      spelStatus = UITLEG;
+     console.log("game over");
+    textSize(50);
+    fill("white");
+    text("game over, druk spatie voor start", 300, 300);
+     if(keyIsDown(32)) { // spatie
+    spelStatus = UITLEG;
+     }
     }
+  if (spelStatus === UITLEG) {
+    // teken uitleg scherm
+    console.log("uitleg");
+    textSize(50);
+    fill("green");
+    rect(0, 0, 1280, 720);
+    fill("white");
+    text("uitleg: doe je ding, druk op enter", 300, 300);
+    if (keyIsDown(13)) { // enter
+          spelerX = 100;
+    spelStatus = SPELEN;
+  }   
   } 
 }
