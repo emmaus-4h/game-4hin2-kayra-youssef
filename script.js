@@ -98,7 +98,12 @@ if (spelerSpringt === true) {
  */
 var verwerkBotsing = function () {
   // botsing speler tegen vijand
-
+  if (spelerX - vijandX < 50 &&
+      spelerX - vijandX >-50 &&
+      spelerY - vijandY <50 &&
+      spelerY - vijandY > -50) {
+    console.log("Botsing");
+      }
   // botsing kogel tegen vijand
 
   // update punten en health
@@ -110,7 +115,7 @@ var verwerkBotsing = function () {
  */
 var tekenAlles = function () {
   // achtergrond
-  fill("green");
+  fill("black");
   rect(0,0,1280,720);
   // vijand
   fill("red");
@@ -120,7 +125,7 @@ var tekenAlles = function () {
   // kogel
 
   // speler
-  fill("white");
+  fill("blue");
   rect(spelerX - 25, spelerY - 25, 50, 50);
   fill("black");
   ellipse(spelerX, spelerY, 10, 10);
@@ -168,11 +173,10 @@ function setup() {
  */
 function draw() {
   if (spelStatus === SPELEN) {
-    console.log("SPELEN");
     beweegalles();
     verwerkBotsing();
     tekenAlles();
-    if ( checkGameOver() ) {
+    if (checkGameOver()) {
       spelStatus = GAMEOVER;
     }
   }
