@@ -23,9 +23,9 @@ Basis: uitleg, spelen, afgaan en punten
         - Gebruik variabalen spelerX en spelerY als middelpunt van de speler
 - [x] 4. *(pas de volgende stappen in de planning zelf aan)*
 - [x] x. teken je tegenspeler (vijanden of dingen die je moet pakken of doelen of ...)
-- [x] x.  kogel (als die in je spel zit) (we hadden de code van de kogel gedaan maare )
+- [x] x.  kogel (als die in je spel zit) // we hadden de code van de kogel gedaan maar het was ons niet gelukt om een kogel te krijgen.
 - [x] x. tegenspeler kan automatisch bewegen
-- [x] x. zet punten op het scherm 
+- [x] x. zet punten op het scherm // we hebben de HP erbij gezet maar het is niet gelukt om ervoor te zorgen dat het op 0 stopt. we hebben het lang geprobeerd maar het lukte ons maar niet om ervoor te zorgen dat de game wanneer de speler 0 hp heeft stopt. 
 - [x] x. wanneer je geraakt wordt verlies je hp
 - [x] x. zorg dat je af kunt
 - [x] x. maak game-over-scherm
