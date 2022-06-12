@@ -23,13 +23,13 @@ Basis: uitleg, spelen, afgaan en punten
         - Gebruik variabalen spelerX en spelerY als middelpunt van de speler
 - [x] 4. *(pas de volgende stappen in de planning zelf aan)*
 - [x] x. teken je tegenspeler (vijanden of dingen die je moet pakken of doelen of ...)
-- [ ] x. teken een bal, kogel (als die in je spel zit)
-- [ ] x. beweeg de tegenspeler of je bal
-- [ ] x. zet punten op het scherm 
-- [ ] x. zorg dat je punten kunt scoren
-- [ ] x. zorg dat je af kunt
-- [ ] x. maak game-over-scherm
-- [ ] x. maak uitlegscherm
+- [x] x.  kogel (als die in je spel zit) (we hadden de code van de kogel gedaan maare )
+- [x] x. tegenspeler kan automatisch bewegen
+- [x] x. zet punten op het scherm 
+- [x] x. wanneer je geraakt wordt verlies je hp
+- [x] x. zorg dat je af kunt
+- [x] x. maak game-over-scherm
+- [x] x. maak uitlegscherm
 
 ### Uitbreidingen 1
 Uitbreiding: *bedenk iets, bijvoorbeeld meer tegenstanders*
@@ -48,9 +48,9 @@ Kies de uitbreidingen die je leuk vindt en maak je game nog mooier
 - [ ] Gebruik plaatjes voor de vijanden
 - [ ] Animeer speler
 - [ ] Laat badges vallen die extra's aan speler geven
-- [ ] Maak spel steeds moeilijker door toenemend aantal vijanden met tekenVijand
-- [ ] Maak andere vijanden bij toenemen tekenVijand
-- [ ] Laat vijanden bewegen in patronen
+- [x] Maak spel steeds moeilijker door toenemend aantal vijanden met tekenVijand
+- [x] Maak andere vijanden bij toenemen tekenVijand
+- [x] Laat vijanden bewegen in patronen
 - [ ] Maak bediening met touch of bewegen van telefoon mogelijk (zorg dat toetsenbordbediening ook blijft werken)
 - [ ] ...
 

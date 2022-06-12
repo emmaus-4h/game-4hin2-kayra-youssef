@@ -46,10 +46,10 @@ var vijandY7 = 250;
 var kogelY = 300;
 var kogelVliegt = false;
 
-var HP = 100;
+var HP = 500 ;
 
 
-/* ********************************************* */
+/* hp is ons niet goed gelukt. Voorderest hebben we ons best gedaan om er een goede game van te maken. ********************************************* */ 
 /* functies die je gebruikt in je game           */
 /* ********************************************* */
 
@@ -319,7 +319,60 @@ var tekenAlles = function () {
      console.log("botsing")
      return true;
       }
-  
+
+    if (spelerX - vijandX2 < 5 &&
+      vijandX2 - spelerX < 5 &&
+      spelerY - vijandY2 < 5 &&
+      vijandY2 - spelerY < 5) {
+     aantal = aantal + 1;
+     console.log("botsing")
+     return true;
+      }
+
+    if (spelerX - vijandX3 < 5 &&
+      vijandX3 - spelerX < 5 &&
+      spelerY - vijandY3 < 5 &&
+      vijandY3 - spelerY < 5) {
+     aantal = aantal + 1;
+     console.log("botsing")
+     return true;
+      }
+
+    if (spelerX - vijandX4 < 5 &&
+      vijandX4 - spelerX < 5 &&
+      spelerY - vijandY4 < 5 &&
+      vijandY4 - spelerY < 5) {
+     aantal = aantal + 1;
+     console.log("botsing")
+     return true;
+      }
+
+    if (spelerX - vijandX5 < 5 &&
+      vijandX5 - spelerX < 5 &&
+      spelerY - vijandY5 < 5 &&
+      vijandY5 - spelerY < 5) {
+     aantal = aantal + 1;
+     console.log("botsing")
+     return true;
+      }
+
+    if (spelerX - vijandX6 < 5 &&
+      vijandX6 - spelerX < 5 &&
+      spelerY - vijandY6 < 5 &&
+      vijandY6 - spelerY < 5) {
+     aantal = aantal + 1;
+     console.log("botsing")
+     return true;
+      }
+
+    if (spelerX - vijandX7 < 5 &&
+      vijandX7 - spelerX < 5 &&
+      spelerY - vijandY7 < 5 &&
+      vijandY7 - spelerY < 5) {
+     aantal = aantal + 1;
+     console.log("botsing")
+     return true;
+      }
       }
   // check of HP 0 is , of tijd op is, of ...
     
