@@ -128,15 +128,17 @@ if (vijandX - spelerX < 50 &&
    vijandX - spelerX > - 50 &&
    vijandY - spelerY < 75 &&
    vijandY - spelerY > - 75) {
-  console.log("botsing");
+  console.log("GAMEOVER");
   HP = HP-10;
    }
 
+
+  
   if (vijandX2 - spelerX < 50 &&
     vijandX2 - spelerX > - 50 &&
     vijandY2 - spelerY < 75 &&
     vijandY2 - spelerY > - 75) {
-    console.log("botsing");
+    console.log("GAMEOVER");
     HP = HP-10;
     }
   // botsing kogel tegen vijand
@@ -181,13 +183,15 @@ var tekenAlles = function () {
       spelerY - vijandY < 5 &&
       vijandY - spelerY < 5) {
      aantal = aantal + 1;
-     console.log("botsing"+aantal)
+     console.log("botsing")
      return true;
       }
+  
+      }
   // check of HP 0 is , of tijd op is, of ...
-    return false;
+    
  
-};
+
 
 /* ********************************************* */
 /* setup() en draw() functies / hoofdprogramma   */
