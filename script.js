@@ -25,7 +25,7 @@ var spelerY = 600; // y-positie van speler
 
 var spelerSpringt = false;
 var springSnelheid = 0 ;
-var springSnelheidStart = 24;
+var springSnelheidStart = 15;
 var zwaartekracht = 0.5 ;
 
 var vijandX = 600;
