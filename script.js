@@ -46,10 +46,10 @@ var vijandY7 = 250;
 var kogelY = 300;
 var kogelVliegt = false;
 
-var HP = 500 ;
+var HP = 1000 ;
 
 
-/* hp is ons niet goed gelukt. Voorderest hebben we ons best gedaan om er een goede game van te maken. ********************************************* */ 
+/* Hp en een kogel maken is ons niet goed gelukt. Voorderest hebben we ons best gedaan om er een goede game van te maken. De game zelf is ongeveer hetzelfde als wat we aan het begin van deze opdracht hoopten. Ons voortgang was af en toe moeilijk maar de laatste weken hebben we het goed opgepakt en we hebben geprobeeerd er een leuk spel van te maken. .********************************************* */ 
 /* functies die je gebruikt in je game           */
 /* ********************************************* */
 
