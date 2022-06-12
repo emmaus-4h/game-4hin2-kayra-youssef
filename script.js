@@ -68,7 +68,7 @@ var beweegalles = function () {
 
 // speler springen
 if (spelerSpringt === false &&
-    keyIsDown(KEY_SPACE)) { // start sprong
+    keyIsDown(UP_ARROW)) { // start sprong
    spelerSpringt = true;
   springSnelheid = springSnelheidStart;
 }
@@ -141,10 +141,10 @@ var tekenAlles = function () {
  * anders return false
  */
  var checkGameOver = function () {
-   if (spelerX - vijandX < 50 &&
-      vijandX - spelerX < 50 &&
-      spelerY - vijandY < 50 &&
-      vijandY - spelerY < 50) {
+   if (spelerX - vijandX < 5 &&
+      vijandX - spelerX < 5 &&
+      spelerY - vijandY < 5 &&
+      vijandY - spelerY < 5) {
      aantal = aantal + 1;
      console.log("botsing"+aantal)
      return true;
@@ -171,7 +171,7 @@ function setup() {
   createCanvas(1280, 720);
 
   // Kleur de achtergrond blauw, zodat je het kunt zien
-  background('pink');
+  background('blue');
 }
 
 /**
