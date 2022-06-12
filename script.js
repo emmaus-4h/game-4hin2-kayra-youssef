@@ -200,6 +200,48 @@ if (vijandX - spelerX < 50 &&
     console.log("GAMEOVER");
     HP = HP-10;
     }
+
+  if (vijandX3 - spelerX < 50 &&
+    vijandX3 - spelerX > - 50 &&
+    vijandY3 - spelerY < 75 &&
+    vijandY3 - spelerY > - 75) {
+    console.log("GAMEOVER");
+    HP = HP-10;
+    }
+
+  if (vijandX4 - spelerX < 50 &&
+    vijandX4 - spelerX > - 50 &&
+    vijandY4 - spelerY < 75 &&
+    vijandY4 - spelerY > - 75) {
+    console.log("GAMEOVER");
+    HP = HP-10;
+    }
+
+  if (vijandX5 - spelerX < 50 &&
+    vijandX5 - spelerX > - 50 &&
+    vijandY5 - spelerY < 75 &&
+    vijandY5 - spelerY > - 75) {
+    console.log("GAMEOVER");
+    HP = HP-10;
+    }
+
+  if (vijandX6 - spelerX < 50 &&
+    vijandX6 - spelerX > - 50 &&
+    vijandY6 - spelerY < 75 &&
+    vijandY6 - spelerY > - 75) {
+    console.log("GAMEOVER");
+    HP = HP-10;
+    }
+
+  if (vijandX7 - spelerX < 50 &&
+    vijandX7 - spelerX > - 50 &&
+    vijandY7 - spelerY < 75 &&
+    vijandY7 - spelerY > - 75) {
+    console.log("GAMEOVER");
+    HP = HP-10;
+    }
+
+  
   // botsing kogel tegen vijand
 
   // update punten en health
