@@ -6,7 +6,7 @@ Gemaakt door:
 - *Youssef el Ghani*
 
 ### Beschrijving
-*het doel is om zo groot mogelijk te worden door dingen op je pad op te rapen*
+* Het doel van het spel is om niet geraakt te worden door de vijanden in het rood. Elk keer dat zij je raken gaat er hp van je speler af. *
 
 ## Mijn planning
 Werk de planning af van boven naar beneden<br>
