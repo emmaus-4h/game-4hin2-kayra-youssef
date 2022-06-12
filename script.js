@@ -28,12 +28,21 @@ var springSnelheid = 0 ;
 var springSnelheidStart = 15;
 var zwaartekracht = 0.5 ;
 
-var vijandX = 100;
-var vijandY = 200;
-var vijandX2 = 1080;
-var vijandY2 = 500;
+var vijandX = 200;
+var vijandY = 250;
+var vijandX2 = 200;
+var vijandY2 = 250;
+var vijandX3 = 300;
+var vijandY3 = 350;
+var vijandX4 = 300;
+var vijandY4 = 400;
+var vijandX5 = 500;
+var vijandY5 = 550;
+var vijandX6 = 600;
+var vijandY6 = 650;
+var vijandX7 = 200;
+var vijandY7 = 250;
 
-var kogelX = 400;
 var kogelY = 300;
 var kogelVliegt = false;
 
@@ -102,7 +111,57 @@ if (spelerY > 610) { // sprong klaar
   if (vijandY2 < 1) {
     vijandX2 + (100, 1100)
   };
-  
+
+    vijandY3 = vijandY3 + 8;
+
+  if (vijandY3 > 720) {
+    vijandY3 = 0;
+  }
+
+  if (vijandY3 < 1) {
+    vijandX3 = (100, 1100)
+  };
+
+  vijandY4 = vijandY4 + 8;
+
+  if (vijandY4 > 720) {
+    vijandY4 = 0;
+  }
+
+  if (vijandY4 < 1) {
+    vijandX4 + (100, 1100)
+  };
+
+    vijandY5 = vijandY5 + 8;
+
+  if (vijandY5 > 720) {
+    vijandY5 = 0;
+  }
+
+  if (vijandY5 < 1) {
+    vijandX5 = (100, 1100)
+  };
+
+  vijandY6 = vijandY6 + 8;
+
+  if (vijandY6 > 720) {
+    vijandY6 = 0;
+  }
+
+  if (vijandY6 < 1) {
+    vijandX6 + (100, 1100)
+  };
+
+   vijandY7 = vijandY7 + 8;
+
+  if (vijandY7 > 720) {
+    vijandY7 = 0;
+  }
+
+  if (vijandY7 < 1) {
+    vijandX7 = (100, 1100)
+  };
+
   // kogel
 
   if (kogelVliegt == false && keyIsDown(13)) { // start schieten
@@ -159,6 +218,38 @@ var tekenAlles = function () {
   rect(vijandX - 25, vijandY - 25, 50, 50);
   fill("black");
   ellipse(vijandX - vijandY, 10, 10);
+
+    fill("red");
+  rect(vijandX2 - 25, vijandY2 - 25, 50, 50);
+  fill("black");
+  ellipse(vijandX2 - vijandY2, 10, 10);
+
+    fill("red");
+  rect(vijandX3 - 25, vijandY3 - 25, 50, 50);
+  fill("black");
+  ellipse(vijandX3 - vijandY3, 10, 10);
+
+    fill("red");
+  rect(vijandX4 - 25, vijandY4 - 25, 50, 50);
+  fill("black");
+  ellipse(vijandX4 - vijandY4, 10, 10);
+
+      fill("red");
+  rect(vijandX5 - 25, vijandY5 - 25, 50, 50);
+  fill("black");
+  ellipse(vijandX5 - vijandY5, 10, 10);
+
+    fill("red");
+  rect(vijandX6 - 25, vijandY6 - 25, 50, 50);
+  fill("black");
+  ellipse(vijandX6 - vijandY6, 10, 10);
+
+    fill("red");
+  rect(vijandX7 - 25, vijandY7 - 25, 50, 50);
+  fill("black");
+  ellipse(vijandX7 - vijandY7, 10, 10);
+
+  
   // kogel
 
   // speler
