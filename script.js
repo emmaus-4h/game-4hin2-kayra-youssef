@@ -37,7 +37,7 @@ var kogelX = 400;
 var kogelY = 300;
 var kogelVliegt = false;
 
-var HP = 10;
+var HP = 100;
 
 
 /* ********************************************* */
@@ -87,11 +87,10 @@ if (spelerY > 610) { // sprong klaar
 
   if (vijandY > 720) {
     vijandY = 0;
-  
-  };
+  }
 
   if (vijandY < 1) {
-    vijandY = (100, 1100)
+    vijandX = (100, 1100)
   };
 
   vijandY2 = vijandY2 + 8;
@@ -125,7 +124,21 @@ if (spelerY > 610) { // sprong klaar
  */
 var verwerkBotsing = function () {
   // botsing speler tegen vijand
+if (vijandX - spelerX < 50 &&
+   vijandX - spelerX > - 50 &&
+   vijandY - spelerY < 75 &&
+   vijandY - spelerY > - 75) {
+  console.log("botsing");
+  HP = HP-10;
+   }
 
+  if (vijandX2 - spelerX < 50 &&
+    vijandX2 - spelerX > - 50 &&
+    vijandY2 - spelerY < 75 &&
+    vijandY2 - spelerY > - 75) {
+    console.log("botsing");
+    HP = HP-10;
+    }
   // botsing kogel tegen vijand
 
   // update punten en health
