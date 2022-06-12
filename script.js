@@ -28,8 +28,10 @@ var springSnelheid = 0 ;
 var springSnelheidStart = 15;
 var zwaartekracht = 0.5 ;
 
-var vijandX = 600;
-var vijandY = 500;
+var vijandX = 100;
+var vijandY = 200;
+var vijandX2 = 1080;
+var vijandY2 = 500;
 
 var kogelX = 400;
 var kogelY = 300;
@@ -81,7 +83,27 @@ if (spelerY > 610) { // sprong klaar
 }   
   
   // vijand
+  vijandY = vijandY + 8;
 
+  if (vijandY > 720) {
+    vijandY = 0;
+  
+  };
+
+  if (vijandY < 1) {
+    vijandY = (100, 1100)
+  };
+
+  vijandY2 = vijandY2 + 8;
+
+  if (vijandY2 > 720) {
+    vijandY2 = 0;
+  }
+
+  if (vijandY2 < 1) {
+    vijandX2 + (100, 1100)
+  };
+  
   // kogel
 
   if (kogelVliegt == false && keyIsDown(13)) { // start schieten
